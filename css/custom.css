@@ -53,7 +53,9 @@ body {
 }
 
 .table-sim td {
-  background-color: var(--sim-surface);
+  background-color: var(--sim-surface) !important;
+  color: #d1d5db !important; /* Светло-серый читаемый текст */
+  border-color: var(--sim-border) !important;
 }
 
 .accordion-sim .accordion-item {
