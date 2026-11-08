@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование заезда — ropZ Sim Racing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
+        <span class="text-danger">///</span> ropZ Sim Racing
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Автопарк и симуляторы</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Кокпит Pro</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Бронирование</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-danger btn-sm px-3 fw-semibold" href="order.html">Забронировать</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="card sim-card shadow-lg">
+          <div class="card-header bg-black border-bottom border-secondary py-3">
+            <h1 class="h4 mb-0 text-white fw-bold"><span class="text-danger">///</span> Форма бронирования сессии</h1>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-dark border border-secondary text-secondary small mb-4" role="alert">
+              Поля, помеченные звёздочкой (*), обязательны для заполнения. Администратор зарезервирует слот и пришлёт подтверждение в мессенджер.
+            </div>
+
+            <form>
+              <div class="row g-3">
+                <!-- ФИО -->
+                <div class="col-12 col-md-6">
+                  <label for="order-name" class="form-label text-secondary small">ФИО пилота *</label>
+                  <input id="order-name" name="name" type="text" class="form-control form-dark" placeholder="Альберт Юркив" required>
+                </div>
+
+                <!-- Email -->
+                <div class="col-12 col-md-6">
+                  <label for="order-email" class="form-label text-secondary small">E-mail для чека и телеметрии *</label>
+                  <input id="order-email" name="email" type="email" class="form-control form-dark" placeholder="pilot@ropzsim.ru" required>
+                </div>
+
+                <!-- Телефон с input-group -->
+                <div class="col-12 col-md-6">
+                  <label for="order-phone" class="form-label text-secondary small">Телефон для связи *</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-black border-secondary text-secondary">+7</span>
+                    <input id="order-phone" name="phone" type="tel" class="form-control form-dark" placeholder="900 123-45-67" required>
+                  </div>
+                </div>
+
+                <!-- Выбор кокпита -->
+                <div class="col-12 col-md-6">
+                  <label for="order-station" class="form-label text-secondary small">Класс станции *</label>
+                  <select id="order-station" name="station" class="form-select form-dark" required>
+                    <option value="" selected disabled>Выберите симулятор</option>
+                    <option value="club">Club Rig — Moza R9 (1 200 ₽/час)</option>
+                    <option value="pro">Pro Triple Screen — Simucube 2 (2 200 ₽/час)</option>
+                    <option value="motion">Motion Platform 4DOF VR (3 200 ₽/час)</option>
+                    <option value="formula">Formula Single Seater (2 800 ₽/час)</option>
+                    <option value="drift">Rally & Drift Rig (1 800 ₽/час)</option>
+                    <option value="lan">Аренда всей LAN-зоны (6 мест) (9 500 ₽/час)</option>
+                  </select>
+                </div>
+
+                <!-- Дата и длительность -->
+                <div class="col-12 col-md-6">
+                  <label for="order-date" class="form-label text-secondary small">Дата заезда *</label>
+                  <input id="order-date" name="date" type="date" class="form-control form-dark" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-duration" class="form-label text-secondary small">Длительность сессии *</label>
+                  <select id="order-duration" name="duration" class="form-select form-dark" required>
+                    <option value="30">30 минут (разминка / хотлап)</option>
+                    <option value="60" selected>60 минут (стандартная сессия)</option>
+                    <option value="120">120 минут (полная гоночная дистанция)</option>
+                  </select>
+                </div>
+
+                <!-- Комментарий / Дисциплина -->
+                <div class="col-12">
+                  <label for="order-comment" class="form-label text-secondary small">Пожелания по трассе, автомобилю или симулятору</label>
+                  <textarea id="order-comment" name="comment" class="form-control form-dark" rows="3" placeholder="Например: Assetto Corsa Competizione, Porsche 911 GT3 R на трассе Spa-Francorchamps, помощь с настройкой телеметрии."></textarea>
+                </div>
+
+                <!-- Чекбокс регламента -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input id="order-agree" class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label text-secondary small" for="order-agree">
+                      Я ознакомлен с регламентом клуба, правилами обращения с Direct Drive оборудованием и даю согласие на обработку персональных данных *
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Кнопки действия -->
+                <div class="col-12 d-flex gap-2 pt-3 border-top border-secondary">
+                  <button class="btn btn-danger px-4" type="submit">Подтвердить бронирование</button>
+                  <button class="btn btn-outline-secondary" type="reset">Очистить форму</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-black py-4 border-top border-secondary text-center text-muted small">
+    &copy; 2026 ropZ Sim Racing. Учебный проект.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

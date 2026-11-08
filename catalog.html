@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кокпиты и автопарк — ropZ Sim Racing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
+        <span class="text-danger">///</span> ropZ Sim Racing
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Автопарк и симуляторы</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Кокпит Pro</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-danger btn-sm px-3 fw-semibold" href="order.html">Забронировать</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-danger text-decoration-none" href="index.html">Главная</a></li>
+        <li class="breadcrumb-item text-secondary active" aria-current="page">Автопарк и симуляторы</li>
+      </ol>
+    </nav>
+
+    <!-- Место для динамического алерта из JS -->
+    <div id="catalogAlertContainer"></div>
+
+    <div class="alert alert-dark border border-secondary text-secondary d-flex align-items-center gap-3 mb-4" role="alert">
+      <span class="fs-4 text-danger">⚠️</span>
+      <div>
+        <strong class="text-white">Бесплатный инструктаж:</strong> Первый визит включает 10-минутную калибровку педалей под силу нажатия вашей ноги и настройку угла обзора.
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+      <div>
+        <h1 class="h2 text-white mb-0">Каталог гоночных станций</h1>
+        <p class="text-secondary small mb-0">Все симуляторы собраны на жёстких алюминиевых профилях 160x40 без люфтов</p>
+      </div>
+      <button class="btn btn-outline-danger" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
+        Экспресс-бронь в 1 клик
+      </button>
+    </div>
+
+    <!-- Сетка карточек -->
+    <div class="row g-4 mb-5">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm">
+          <img src="images/sim-club.jpg" class="card-img-top" alt="Club Rig Entry">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">Club Rig Entry</h2>
+              <span class="badge badge-club">Club</span>
+            </div>
+            <p class="card-text text-secondary small">База Moza R9, руль CS V2P GT, монитор 34" Ultrawide. Идеально для новичков.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">1 200 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <button class="btn btn-danger flex-fill" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">В 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm border-danger">
+          <img src="images/sim-pro.jpg" class="card-img-top" alt="Pro Simucube Triple">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">Pro Simucube Triple</h2>
+              <span class="badge badge-pro">Хит</span>
+            </div>
+            <p class="card-text text-secondary small">База Simucube 2 Pro 25 Нм, тройной экран 3x32" QHD (обзор 180°), педали Heusinkveld Sprint.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">2 200 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <button class="btn btn-danger flex-fill" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">В 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm">
+          <img src="images/sim-motion.jpg" class="card-img-top" alt="Motion Platform 4DOF">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">Motion Platform 4DOF</h2>
+              <span class="badge badge-motion">Motion VR</span>
+            </div>
+            <p class="card-text text-secondary small">Подвижные актуаторы с передачей перегрузок, шлем VR Pimax Crystal, бас-шейкеры Buttkicker.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">3 200 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <button class="btn btn-danger flex-fill" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">В 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm">
+          <img src="images/sim-formula.jpg" class="card-img-top" alt="Formula Single Seater">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">Formula Single Seater</h2>
+              <span class="badge bg-warning text-dark">Formula Rig</span>
+            </div>
+            <p class="card-text text-secondary small">Полулежачая посадка F1, штурвал с LCD экраном телеметрии, активные педали Simucube ActivePedal.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">2 800 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <button class="btn btn-danger flex-fill" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">В 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm">
+          <img src="images/sim-drift.jpg" class="card-img-top" alt="Drift & Rally Station">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">Drift & Rally Station</h2>
+              <span class="badge bg-secondary">Rally / Drift</span>
+            </div>
+            <p class="card-text text-secondary small">Замшевый руль 350мм, вертикальный гидроручник, секвентальная КПП и H-паттерн шифтер.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">1 800 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <button class="btn btn-danger flex-fill" type="button" data-bs-toggle="modal" data-bs-target="#quickOrderModal">В 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card sim-card h-100 shadow-sm">
+          <img src="images/sim-lan.jpg" class="card-img-top" alt="LAN Battle Grid">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="card-title h5 text-white mb-0">LAN Grid (6 мест)</h2>
+              <span class="badge bg-success">Групповой</span>
+            </div>
+            <p class="card-text text-secondary small">Аренда всей зоны кокпитов для проведения турнира среди друзей с закрытым лобби.</p>
+            <p class="fw-bold fs-5 text-white mt-auto mb-3">9 500 ₽ <span class="fs-6 text-secondary fw-normal">/ час</span></p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-light flex-fill" href="product.html">Характеристики</a>
+              <a class="btn btn-danger flex-fill" href="order.html">Забронировать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Аккордеон FAQ -->
+    <section id="faq" class="my-5 pt-3">
+      <h2 class="h3 text-white mb-4">Часто задаваемые вопросы и регламент</h2>
+      <div class="accordion accordion-sim" id="simFaqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+              Нужна ли специальная обувь и экипировка?
+            </button>
+          </h3>
+          <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#simFaqAccordion">
+            <div class="accordion-body">
+              Желательно иметь чистую обувь на тонкой плоской подошве (кеды, кроссовки для картинга или носки). Уличная грязная обувь и обувь на каблуках запрещены. Гоночные перчатки клуб выдаёт бесплатно.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+              Укачивает ли на Motion-платформах и в VR?
+            </button>
+          </h3>
+          <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#simFaqAccordion">
+            <div class="accordion-body">
+              Наши системы синхронизированы с задержкой менее 5 мс, что сводит конфликт вестибулярного аппарата к минимуму. Для первого раза рекомендуем 30-минутный заезд на трёхмониторном кокпите Pro.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+              Можно ли настроить собственное авто и выгрузить телеметрию?
+            </button>
+          </h3>
+          <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#simFaqAccordion">
+            <div class="accordion-body">
+              Да, администратор помогает выставить давление в шинах, сход-развал, баланс тормозов и скинуть треки данных MoTeC i2 Pro в Telegram после сессии.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно быстрой заявки -->
+  <div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-sim text-white">
+        <div class="modal-header border-secondary">
+          <h2 class="modal-title h5 text-danger fw-bold" id="quickOrderModalLabel">Экспресс-бронирование</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary small">Оставьте номер телефона, инструктор свяжется в течение 5 минут для выбора свободного кокпита.</p>
+          <form id="quickOrderForm" novalidate>
+            <div class="mb-3">
+              <label for="quick-name" class="form-label text-secondary small">Ваше имя *</label>
+              <input id="quick-name" type="text" class="form-control form-dark" placeholder="Альберт" required>
+              <div class="invalid-feedback">Пожалуйста, введите имя.</div>
+            </div>
+            <div class="mb-3">
+              <label for="quick-phone" class="form-label text-secondary small">Телефон для связи *</label>
+              <input id="quick-phone" type="tel" class="form-control form-dark" placeholder="+7 (900) 000-00-00" required>
+              <div class="invalid-feedback">Укажите номер телефона.</div>
+            </div>
+            <div class="form-check mb-3">
+              <input id="quick-agree" class="form-check-input" type="checkbox" required checked>
+              <label class="form-check-label text-secondary small" for="quick-agree">
+                Согласен на условия регламента клуба
+              </label>
+            </div>
+            <div class="d-flex justify-content-end gap-2 border-top border-secondary pt-3">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+              <button type="submit" class="btn btn-danger">Отправить заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-black py-4 border-top border-secondary text-center text-muted small">
+    &copy; 2026 ropZ Sim Racing. Учебный проект.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
