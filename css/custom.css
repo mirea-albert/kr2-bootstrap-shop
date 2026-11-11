@@ -108,7 +108,7 @@ body {
   border: 1px solid var(--sim-border);
 }
 
-/* Новый футер по образцу */
+/* Стилизация футера с повышенной контрастностью */
 .site-footer {
   background-color: #080a0d;
   color: #cbd5e1;
@@ -134,45 +134,37 @@ body {
 }
 
 .footer-links a {
-  color: #94a3b8;
+  color: #cbd5e1 !important;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .footer-contact-item {
-  margin-bottom: 0.5rem;
-  color: #94a3b8;
+  margin-bottom: 0.6rem;
+  color: #e2e8f0 !important;
+}
+
+.footer-contact-item a {
+  color: #e2e8f0 !important;
+}
+
+.footer-contact-item a:hover {
+  color: #ffffff !important;
+}
+
+.footer-text-bright {
+  color: #cbd5e1 !important;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 1.5rem;
   margin-top: 2rem;
-}
-
-.scroll-top-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--sim-border);
-  color: #ffffff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.scroll-top-btn:hover {
-  background-color: var(--sim-primary);
-  border-color: var(--sim-primary);
-  color: #ffffff;
+  color: #cbd5e1 !important;
 }
 
 .social-pill {
@@ -182,7 +174,7 @@ body {
   padding: 0.35rem 0.85rem;
   background-color: var(--sim-surface);
   border: 1px solid var(--sim-border);
-  color: #ffffff;
+  color: #ffffff !important;
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.85rem;
@@ -191,11 +183,12 @@ body {
 
 .social-pill:hover {
   border-color: var(--sim-primary);
-  color: #ffffff;
+  background-color: var(--sim-primary);
+  color: #ffffff !important;
   transform: translateY(-2px);
 }
 
-/* Фиксированная плавающая кнопка «Наверх» в стиле гоночного руля */
+/* Плавающая кнопка-руль */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 25px;
@@ -219,7 +212,6 @@ body {
   cursor: pointer;
 }
 
-/* Состояние, когда кнопка активна и видна */
 .scroll-to-top-btn.show {
   opacity: 1;
   visibility: visible;
@@ -241,7 +233,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Эффект легкого «подруливания» при наведении */
 .scroll-to-top-btn:hover svg {
   transform: rotate(-35deg);
 }

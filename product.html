@@ -9,7 +9,7 @@
 </head>
 <body id="top">
 
-  <!-- Навигация -->
+  <!-- Навигация: Главная -> Автопарк -> О нас -> Контакты -> Дополнительно (active) -> Забронировать -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
     <div class="container">
       <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
@@ -22,13 +22,13 @@
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Автопарк и симуляторы</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
           <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Дополнительно
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="about.html">О нас</a></li>
               <li><a class="dropdown-item active" href="product.html">Обзор кокпита Pro</a></li>
               <li><a class="dropdown-item" href="catalog.html#faq">Регламент и FAQ</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -132,17 +132,12 @@
   <footer class="site-footer pt-5 pb-4 mt-5">
     <div class="container">
       <div class="row g-4">
-        <!-- Колонка 1: О клубе и соцсети под логотипом -->
+        <!-- Колонка 1: О клубе -->
         <div class="col-12 col-md-6 col-lg-3">
           <h3 class="footer-heading text-danger">/// ropZ Sim Racing</h3>
-          <p class="text-secondary small mb-3">
+          <p class="footer-text-bright small mb-0">
             Интерактивный клуб автоспорта и тренировочная база пилотов. Профессиональные Direct Drive базы, подвижные 4DOF платформы и сетевые кубки.
           </p>
-          <div class="d-flex gap-2">
-            <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-pill">VK</a>
-            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-pill">Telegram</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill">YouTube</a>
-          </div>
         </div>
 
         <!-- Колонка 2: Навигация -->
@@ -150,8 +145,8 @@
           <h4 class="footer-heading">Навигация</h4>
           <ul class="footer-links small">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
             <li><a href="catalog.html">Автопарк и симуляторы</a></li>
+            <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
 
@@ -160,16 +155,22 @@
           <h4 class="footer-heading">Связаться</h4>
           <div class="small">
             <div class="footer-contact-item mb-2">
-              <span class="me-2">📞</span><a href="tel:+74951202200" class="text-white text-decoration-none fw-semibold">+7 (495) 120-22-00</a>
+              <span class="me-2">📞</span><a href="tel:+74951202200" class="fw-semibold text-decoration-none">+7 (495) 120-22-00</a>
             </div>
             <div class="footer-contact-item mb-2">
-              <span class="me-2">✉️</span><a href="mailto:info@ropzsim.ru" class="text-secondary text-decoration-none">info@ropzsim.ru</a>
+              <span class="me-2">✉️</span><a href="mailto:info@ropzsim.ru" class="text-decoration-none">info@ropzsim.ru</a>
             </div>
-            <div class="footer-contact-item text-muted mt-2">
+            <div class="footer-contact-item mb-1">
               <span class="me-2">🕒</span>Ежедневно, 11:00–23:00
             </div>
-            <div class="footer-contact-item text-muted">
+            <div class="footer-contact-item mb-3">
               <span class="me-2">🏁</span>Пт–Сб: ночные гонки до 04:00
+            </div>
+
+            <div class="d-flex gap-2">
+              <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-pill">VK</a>
+              <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-pill">Telegram</a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill">YouTube</a>
             </div>
           </div>
         </div>
@@ -177,15 +178,15 @@
         <!-- Колонка 4: Локация -->
         <div class="col-12 col-md-6 col-lg-3">
           <h4 class="footer-heading">Локация клуба</h4>
-          <p class="small text-secondary mb-1"><span class="me-1">📍</span>Москва, Проспект Вернадского, 78</p>
-          <p class="small text-secondary mb-1">ООО «Ропз Сим Рейсинг»</p>
-          <p class="small text-muted mb-3">Групповые заезды и турниры — по предварительной записи</p>
+          <p class="small footer-text-bright mb-1"><span class="me-1">📍</span>Москва, Проспект Вернадского, 78</p>
+          <p class="small footer-text-bright mb-1">ООО «Ропз Сим Рейсинг»</p>
+          <p class="small footer-text-bright mb-3 opacity-75">Групповые заезды и турниры — по предварительной записи</p>
           <a class="btn btn-danger w-100 fw-semibold" href="order.html">Забронировать заезд</a>
         </div>
       </div>
 
       <div class="footer-bottom d-flex justify-content-between align-items-center">
-        <span class="small text-secondary">© 2026 ropZ Sim Racing. Все права защищены.</span>
+        <span class="small">© 2026 ropZ Sim Racing. Все права защищены.</span>
       </div>
     </div>
   </footer>
