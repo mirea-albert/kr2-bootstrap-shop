@@ -10,7 +10,7 @@
 <body id="top">
 
   <!-- Навигация: Главная -> Автопарк -> О нас -> Контакты -> Дополнительно (active) -> Забронировать -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top border-bottom border-secondary">
     <div class="container">
       <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
         <span class="text-danger">///</span> ropZ Sim Racing
@@ -19,28 +19,29 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <ul class="navbar-nav ms-auto align-items-xl-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="catalog.html">Автопарк и симуляторы</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Автопарк</a></li>
+          <li class="nav-item"><a class="nav-link" href="tournaments.html">Турниры</a></li>
+          <li class="nav-item"><a class="nav-link" href="leaderboard.html">Рекорды</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
           <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Дополнительно
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Клуб
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item active" href="product.html">Обзор кокпита Pro</a></li>
+              <li><a class="dropdown-item" href="product.html">Обзор кокпита Pro</a></li>
               <li><a class="dropdown-item" href="catalog.html#faq">Регламент и FAQ</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="order.html">Быстрая запись</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <!-- Кнопка переключения темы -->
+          <li class="nav-item ms-xl-2 mt-2 mt-xl-0">
             <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Сменить тему" title="Сменить тему">
               <span id="themeIcon">☀️</span>
             </button>
           </li>
-          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <li class="nav-item ms-xl-2 mt-2 mt-xl-0">
             <a class="btn btn-danger btn-sm px-3 fw-semibold" href="order.html">Забронировать</a>
           </li>
         </ul>
