@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modalInstance.hide();
       }
 
-      // Показ уведомления на странице каталога
       const alertContainer = document.getElementById('catalogAlertContainer');
       if (alertContainer) {
         alertContainer.innerHTML = `
@@ -132,5 +131,47 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     });
+  }
+
+  // 6. Анимация счетчиков от 0 при попадании в область видимости экрана
+  const counters = document.querySelectorAll('.stat-counter');
+  if (counters.length > 0) {
+    const animateCounter = (counter) => {
+      const target = parseInt(counter.getAttribute('data-target'), 10);
+      const suffix = counter.getAttribute('data-suffix') || '';
+      const duration = 1600; // длительность анимации (1.6 секунды)
+      const startTime = performance.now();
+
+      const updateCount = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Функция плавного замедления в конце (easeOutQuad)
+        const easeProgress = 1 - Math.pow(1 - progress, 2);
+        const currentCount = Math.floor(easeProgress * target);
+
+        counter.textContent = currentCount + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    };
+
+    // Наблюдатель скролла
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          obs.unobserve(entry.target); // Запускаем анимацию только один раз
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counters.forEach((counter) => observer.observe(counter));
   }
 });

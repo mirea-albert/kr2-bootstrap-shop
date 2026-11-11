@@ -66,27 +66,29 @@
       <div class="col-12 col-lg-6">
         <h2 class="h3 text-white mb-3">От фанатского гаража до инженерного центра</h2>
         <p class="text-secondary">
-          Клуб ropZ Sim Racing был основан в Москве как тренировочная площадка для любителей симрейсинга, которым не хватает точности офисных рулей. Мы поняли, что для правильного понимания физики машины нужны промышленные Direct Drive моторы и гидравлические тормоза с усилием нажатия до 140 кг.
+          Клуб ropZ Sim Racing был основан в Москве как тренировочная площадка для любителей симрейсинга, которым не хватает точности офисных рулей[cite: 8]. Мы поняли, что для правильного понимания физики машины нужны промышленные Direct Drive моторы и гидравлические тормоза с усилием нажатия до 140 кг[cite: 8].
         </p>
         <p class="text-secondary">
-          Сегодня наша локация оснащена шестью синхронизированными кокпитами на станочном профиле, позволяющими проводить как индивидуальные сессии с тренером, так и полноценные LAN-гонки на выносливость с пит-стопами и сменой погоды.
+          Сегодня наша локация оснащена шестью синхронизированными кокпитами на станочном профиле, позволяющими проводить как индивидуальные сессии с тренером, так и полноценные LAN-гонки на выносливость с пит-стопами и сменой погоды[cite: 8].
         </p>
+
+        <!-- Анимированные счётчики -->
         <div class="row g-3 pt-2">
           <div class="col-6 col-sm-4">
             <div class="p-3 bg-black rounded border border-secondary text-center">
-              <span class="fs-3 fw-bold text-danger d-block">6</span>
+              <span class="fs-3 fw-bold text-danger d-block stat-counter" data-target="6" data-suffix="">0</span>
               <span class="small text-secondary">Кокпитов в сети</span>
             </div>
           </div>
           <div class="col-6 col-sm-4">
             <div class="p-3 bg-black rounded border border-secondary text-center">
-              <span class="fs-3 fw-bold text-white d-block">25 Нм</span>
+              <span class="fs-3 fw-bold text-white d-block stat-counter" data-target="25" data-suffix=" Нм">0 Нм</span>
               <span class="small text-secondary">Пиковый FFB</span>
             </div>
           </div>
           <div class="col-12 col-sm-4">
             <div class="p-3 bg-black rounded border border-secondary text-center">
-              <span class="fs-3 fw-bold text-danger d-block">100%</span>
+              <span class="fs-3 fw-bold text-danger d-block stat-counter" data-target="100" data-suffix="%">0%</span>
               <span class="small text-secondary">Лазер-сканы</span>
             </div>
           </div>
@@ -97,7 +99,7 @@
       </div>
     </div>
 
-    <!-- Наша философия (3 карточки) -->
+    <!-- Философия клуба -->
     <section class="my-5">
       <h2 class="h3 text-white text-center mb-4">Принципы подготовки пилотов</h2>
       <div class="row g-4">
@@ -153,6 +155,7 @@
   <footer class="site-footer pt-5 pb-4 mt-5">
     <div class="container">
       <div class="row g-4">
+        <!-- Колонка 1: О клубе и соцсети -->
         <div class="col-12 col-md-6 col-lg-3">
           <h3 class="footer-heading text-danger">/// ropZ Sim Racing</h3>
           <p class="text-secondary small">
@@ -164,6 +167,8 @@
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill">YouTube</a>
           </div>
         </div>
+
+        <!-- Колонка 2: Навигация -->
         <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
           <h4 class="footer-heading">Навигация</h4>
           <ul class="footer-links small">
@@ -175,6 +180,8 @@
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
         </div>
+
+        <!-- Колонка 3: Связаться -->
         <div class="col-6 col-md-3 col-lg-3">
           <h4 class="footer-heading">Связаться</h4>
           <div class="small">
@@ -184,10 +191,16 @@
             <div class="footer-contact-item">
               <a href="tel:+74951202200" class="text-white text-decoration-none fw-semibold">+7 (495) 120-22-00</a>
             </div>
-            <div class="footer-contact-item text-muted mt-2">Ежедневно, 11:00–23:00</div>
-            <div class="footer-contact-item text-muted">Пт–Сб: ночные гонки до 04:00</div>
+            <div class="footer-contact-item text-muted mt-2">
+              Ежедневно, 11:00–23:00
+            </div>
+            <div class="footer-contact-item text-muted">
+              Пт–Сб: ночные гонки до 04:00
+            </div>
           </div>
         </div>
+
+        <!-- Колонка 4: Локация и быстрая бронь -->
         <div class="col-12 col-md-6 col-lg-3">
           <h4 class="footer-heading">Локация клуба</h4>
           <p class="small text-secondary mb-1">Москва, Проспект Вернадского, 78</p>
@@ -196,18 +209,22 @@
           <a class="btn btn-danger w-100 fw-semibold" href="order.html">Забронировать заезд</a>
         </div>
       </div>
-      
+
+      <!-- Нижняя строка -->
+      <div class="footer-bottom d-flex justify-content-between align-items-center">
+        <span class="small text-secondary">© 2026 ropZ Sim Racing. Все права защищены.[cite: 6]</span>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <!-- Кнопка «Наверх» в виде гоночного штурвала -->
+  <!-- Интерактивная плавающая кнопка «Наверх» (руль) -->
   <button id="scrollTopBtn" class="scroll-to-top-btn" type="button" aria-label="Вернуться наверх" title="На старт">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <!-- Иконка спортивного руля -->
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c4.08 0 7.44 3.05 7.93 7h-3.08c-.41-1.16-1.52-2-2.85-2s-2.44.84-2.85 2H4.07C4.56 7.05 7.92 4 12 4zm-1 9c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm-6.93 0h3.08c.41 1.16 1.52 2 2.85 2s2.44-.84 2.85-2h3.08c-.49 3.95-3.85 7-7.93 7s-7.44-3.05-7.93-7z"/>
     </svg>
   </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
