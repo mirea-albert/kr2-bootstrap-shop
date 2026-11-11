@@ -174,4 +174,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach((counter) => observer.observe(counter));
   }
+
+  // 7. Переключение темы (Светлая / Тёмная) с иконкой и localStorage
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeIcon = document.getElementById('themeIcon');
+  const htmlElement = document.documentElement;
+
+  // Проверяем сохранённую тему или выставляем тёмную по умолчанию
+  const savedTheme = localStorage.getItem('ropz-theme') || 'dark';
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-bs-theme');
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
+
+  function applyTheme(theme) {
+    htmlElement.setAttribute('data-bs-theme', theme);
+    localStorage.setItem('ropz-theme', theme);
+
+    if (themeIcon) {
+      // Если тёмная тема — светит солнце (переключить на свет), если светлая — луна
+      if (theme === 'dark') {
+        themeIcon.textContent = '☀️';
+        themeToggleBtn.title = 'Включить светлую тему';
+      } else {
+        themeIcon.textContent = '🌙';
+        themeToggleBtn.title = 'Включить тёмную тему';
+      }
+    }
+  }
 });
