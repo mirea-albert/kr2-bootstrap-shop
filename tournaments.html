@@ -37,6 +37,13 @@
               <li><a class="dropdown-item" href="order.html">Быстрая запись</a></li>
             </ul>
           </li>
+          <!-- Кнопка глобального поиска -->
+          <li class="nav-item ms-xl-2 mt-2 mt-xl-0">
+            <button class="search-trigger-btn" type="button" data-bs-toggle="modal" data-bs-target="#globalSearchModal" aria-label="Поиск по сайту" title="Поиск (Ctrl+K)">
+              🔍
+            </button>
+          </li>
+          <!-- Кнопка переключения темы -->
           <li class="nav-item ms-xl-2 mt-2 mt-xl-0">
             <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Сменить тему" title="Сменить тему">
               <span id="themeIcon">☀️</span>
@@ -70,67 +77,79 @@
     <h2 class="h3 text-white mb-4 border-bottom border-secondary pb-2">Предстоящие этапы</h2>
     <div class="row g-4 mb-5">
       <div class="col-12 col-md-6">
-        <div class="sim-card p-4 rounded h-100 d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="badge bg-danger badge-pulse">Открыта регистрация</span>
-            <span class="text-muted small">20 Декабря 2026</span>
+        <div class="sim-card rounded h-100 d-flex flex-column">
+          <img src="images/sim-pro.jpg" class="tournament-card-img" alt="Winter Endurance 3H">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-danger badge-pulse">Открыта регистрация</span>
+              <span class="text-muted small">20 Декабря 2026</span>
+            </div>
+            <h3 class="h4 text-white">Winter Endurance 3H</h3>
+            <p class="text-secondary small mb-3">
+              Трёхчасовая командная гонка на выносливость в Assetto Corsa Competizione (Suzuka Circuit). Экипажи по 2 пилота со сменой в пит-лейне, динамическая погода и износ шин.
+            </p>
+            <ul class="text-secondary small mb-4">
+              <li><strong>Класс техники:</strong> GT3 (BoP 2026)</li>
+              <li><strong>Призовой фонд:</strong> 25 000 ₽ + абонементы клуба</li>
+              <li><strong>Стартовый взнос:</strong> 3 000 ₽ с команды</li>
+            </ul>
+            <a href="order.html" class="btn btn-danger mt-auto">Подать заявку на участие</a>
           </div>
-          <h3 class="h4 text-white">Winter Endurance 3H</h3>
-          <p class="text-secondary small mb-3">
-            Трёхчасовая командная гонка на выносливость в Assetto Corsa Competizione (Suzuka Circuit). Экипажи по 2 пилота со сменой в пит-лейне, динамическая погода и износ шин.
-          </p>
-          <ul class="text-secondary small mb-4">
-            <li><strong>Класс техники:</strong> GT3 (BoP 2026)</li>
-            <li><strong>Призовой фонд:</strong> 25 000 ₽ + абонементы клуба</li>
-            <li><strong>Стартовый взнос:</strong> 3 000 ₽ с команды</li>
-          </ul>
-          <a href="order.html" class="btn btn-danger mt-auto">Подать заявку на участие</a>
         </div>
       </div>
       
       <div class="col-12 col-md-6">
-        <div class="sim-card p-4 rounded h-100 d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="badge bg-primary">Анонс</span>
-            <span class="text-muted small">15 Января 2027</span>
+        <div class="sim-card rounded h-100 d-flex flex-column">
+          <img src="images/sim-formula.jpg" class="tournament-card-img" alt="Formula Open Cup">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">Анонс</span>
+              <span class="text-muted small">15 Января 2027</span>
+            </div>
+            <h3 class="h4 text-white">Formula Open Cup</h3>
+            <p class="text-secondary small mb-3">
+              Зимний кубок спринтов на машинах с открытыми колёсами (iRacing, FIA F4) по трассам Red Bull Ring и Spa-Francorchamps. Короткие 25-минутные заезды без права на ошибку.
+            </p>
+            <ul class="text-secondary small mb-4">
+              <li><strong>Класс техники:</strong> FIA Formula 4</li>
+              <li><strong>Призовой фонд:</strong> Фирменный мерч клуба + 10 часов заездов</li>
+              <li><strong>Стартовый взнос:</strong> 1 500 ₽ с пилота</li>
+            </ul>
+            <button class="btn btn-outline-secondary mt-auto" disabled>Регистрация откроется 1 декабря</button>
           </div>
-          <h3 class="h4 text-white">Formula Open Cup</h3>
-          <p class="text-secondary small mb-3">
-            Зимний кубок спринтов на машинах с открытыми колёсами (iRacing, FIA F4) по трассам Red Bull Ring и Spa-Francorchamps. Короткие 25-минутные заезды без права на ошибку.
-          </p>
-          <ul class="text-secondary small mb-4">
-            <li><strong>Класс техники:</strong> FIA Formula 4</li>
-            <li><strong>Призовой фонд:</strong> Фирменный мерч клуба + 10 часов заездов</li>
-            <li><strong>Стартовый взнос:</strong> 1 500 ₽ с пилота</li>
-          </ul>
-          <button class="btn btn-outline-secondary mt-auto" disabled>Регистрация откроется 1 декабря</button>
         </div>
       </div>
     </div>
 
     <!-- Завершенные турниры -->
     <h2 class="h3 text-white mb-4 border-bottom border-secondary pb-2">Прошедшие турниры</h2>
-    <div class="sim-card p-4 rounded mb-3">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
+    <div class="sim-card p-3 p-md-4 rounded mb-3">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-md-3">
+          <img src="images/sim-lan.jpg" class="img-fluid rounded border border-secondary" style="height: 115px; width: 100%; object-fit: cover;" alt="Autumn GT Sprint Cup">
+        </div>
+        <div class="col-12 col-md-6">
           <span class="badge bg-secondary mb-1">Завершён</span>
           <h4 class="h5 text-white mb-1">Autumn GT Sprint Cup</h4>
           <p class="text-secondary small mb-0">15 ноября 2026. Трасса: Autodromo Nazionale Monza. Победитель: Алексей С. (ApexHunter).</p>
         </div>
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+        <div class="col-12 col-md-3 text-md-end">
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm">Смотреть трансляцию</a>
         </div>
       </div>
     </div>
 
-    <div class="sim-card p-4 rounded">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
+    <div class="sim-card p-3 p-md-4 rounded">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-md-3">
+          <img src="images/sim-drift.jpg" class="img-fluid rounded border border-secondary" style="height: 115px; width: 100%; object-fit: cover;" alt="Night Drift Battle Moscow">
+        </div>
+        <div class="col-12 col-md-6">
           <span class="badge bg-secondary mb-1">Завершён</span>
           <h4 class="h5 text-white mb-1">Night Drift Battle Moscow</h4>
           <p class="text-secondary small mb-0">28 октября 2026. Трасса: Ebisu Minami. Победитель: Альберт Ю. (ropZ).</p>
         </div>
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+        <div class="col-12 col-md-3 text-md-end">
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm">Смотреть трансляцию</a>
         </div>
       </div>
@@ -141,7 +160,6 @@
   <footer class="site-footer pt-5 pb-4 mt-5">
     <div class="container">
       <div class="row g-4">
-        <!-- Колонка 1: О клубе -->
         <div class="col-12 col-md-6 col-lg-3">
           <h3 class="footer-heading text-danger">/// ropZ Sim Racing</h3>
           <p class="footer-text-bright small mb-0">
@@ -149,12 +167,11 @@
           </p>
         </div>
 
-        <!-- Колонка 2: Навигация -->
         <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
           <h4 class="footer-heading">Навигация</h4>
           <ul class="footer-links small">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Автопарк</a></li>
+            <li><a href="catalog.html">Автопарк и симуляторы</a></li>
             <li><a href="tournaments.html">Турниры и кубки</a></li>
             <li><a href="leaderboard.html">Таблица рекордов</a></li>
             <li><a href="about.html">О нас</a></li>
@@ -162,7 +179,6 @@
           </ul>
         </div>
 
-        <!-- Колонка 3: Связаться -->
         <div class="col-6 col-md-3 col-lg-3">
           <h4 class="footer-heading">Связаться</h4>
           <div class="small">
@@ -187,7 +203,6 @@
           </div>
         </div>
 
-        <!-- Колонка 4: Локация -->
         <div class="col-12 col-md-6 col-lg-3">
           <h4 class="footer-heading">Локация клуба</h4>
           <p class="small footer-text-bright mb-1"><span class="me-1">📍</span>Москва, Проспект Вернадского, 78</p>
